@@ -1,0 +1,71 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1638237044.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"version",
+		"reset",
+		"start",
+		"split",
+		"igt"
+	],
+	"properties": {
+		"version": {
+			"$id": "#root/version", 
+			"title": "Version", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 1
+		},
+		"reset": {
+			"$id": "#root/reset", 
+			"title": "Reset", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"^(§r§9Parkour> §r§7Reset your time for §r§eSnake§r§7\\.§r)|(§r§9Parkour> §r§7Started §r§eSnake§r§7\\.§r)$"
+			],
+			"pattern": "^.*$"
+		},
+		"start": {
+			"$id": "#root/start", 
+			"title": "Start", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"^(§r§9Parkour> §r§7Reset your time for §r§eSnake§r§7\\.§r)|(§r§9Parkour> §r§7Started §r§eSnake§r§7\\.§r)$"
+			],
+			"pattern": "^.*$"
+		},
+		"split": {
+			"$id": "#root/split", 
+			"title": "Split", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/split/items", 
+				"title": "Items", 
+				"type": "string",
+				"default": "",
+				"examples": [
+					"^§r§9Parkour> §r§7You completed §r§eSnake§r§7 in §r§e(?<igts>\\d+(\\.\\d+)?)§r§7 seconds\\.§r$"
+				],
+				"pattern": "^.*$"
+			}
+		},
+		"igt": {
+			"$id": "#root/igt", 
+			"title": "Igt", 
+			"type": "boolean",
+			"examples": [
+				false, 
+				true
+			],
+			"default": false
+		}
+	}
+}
