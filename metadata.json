@@ -1,0 +1,8 @@
+{
+    "name": "ChatSplit",
+    "creator": "Calvin304",
+    "description": "Autosplits on user configurable chat message using livesplit server",
+    "entry": "index.js",
+    "Version": "0.1.0"
+  }
+  
